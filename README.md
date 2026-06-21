@@ -160,7 +160,7 @@ VITE_API_URL=http://localhost:5000/api
 ## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Soumyadubeyyy/EventBooking
 cd event-booking-system
 ```
 
@@ -404,8 +404,29 @@ Cancels an existing booking and releases reserved seats.
   createdAt: Date
 }
 ```
+# 🎟️ Event Booking System
+
+A premium full-stack Event Booking System that allows users to browse events, reserve seats, manage bookings, and enjoy a modern responsive experience with secure authentication, real-time seat validation, dark/light themes, and smooth animations.
 
 ---
+
+## 📸 Application Screenshots
+
+### Home Page (Light Mode)
+
+![Home Light]<img width="1877" height="915" alt="Screenshot 2026-06-21 222836" src="https://github.com/user-attachments/assets/f8aa40a3-5a2e-4306-83a9-f41966fb9092" />
+
+
+### Home Page (Dark Mode)
+
+![Home Dark]<img width="1865" height="913" alt="Screenshot 2026-06-21 222843" src="https://github.com/user-attachments/assets/38cd07a9-03c4-4dee-833c-7e06e1a63329" />
+
+
+### Events Listing
+
+![Events]<img width="1878" height="925" alt="Screenshot 2026-06-21 222934" src="https://github.com/user-attachments/assets/e0fa91ba-99a2-425e-b3bd-4253249059f9" />
+
+
 
 # ✅ Validation & Error Handling
 
