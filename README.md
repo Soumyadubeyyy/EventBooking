@@ -18,11 +18,6 @@ A premium full-stack Event Booking System that allows users to browse events, re
 
 <img width="1878" height="925" alt="Events Listing" src="https://github.com/user-attachments/assets/e0fa91ba-99a2-425e-b3bd-4253249059f9" />
 
-### Authentication
-
-<img width="1802" height="919" alt="Authentication" src="https://github.com/user-attachments/assets/placeholder" />
-
----
 
 # 🚀 Features
 
