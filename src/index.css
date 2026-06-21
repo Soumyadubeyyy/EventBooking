@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  
+  /* Deep Lavender Colors */
+  --color-primary: #5B21B6; /* Violet 800 */
+  --color-primary-hover: #4C1D95; /* Violet 900 */
+  --color-primary-light: #EDE9FE; /* Violet 100 */
+  
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+}
+
+body {
+  font-family: var(--font-sans);
+}
