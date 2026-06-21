@@ -4,6 +4,26 @@ A premium full-stack Event Booking System that allows users to browse events, re
 
 ---
 
+## 📸 Application Screenshots
+
+### Home Page (Light Mode)
+
+<img width="1877" height="915" alt="Home Light Mode" src="https://github.com/user-attachments/assets/f8aa40a3-5a2e-4306-83a9-f41966fb9092" />
+
+### Home Page (Dark Mode)
+
+<img width="1865" height="913" alt="Home Dark Mode" src="https://github.com/user-attachments/assets/38cd07a9-03c4-4dee-833c-7e06e1a63329" />
+
+### Events Listing
+
+<img width="1878" height="925" alt="Events Listing" src="https://github.com/user-attachments/assets/e0fa91ba-99a2-425e-b3bd-4253249059f9" />
+
+### Authentication
+
+<img width="1802" height="919" alt="Authentication" src="https://github.com/user-attachments/assets/placeholder" />
+
+---
+
 # 🚀 Features
 
 ## Authentication
@@ -52,6 +72,20 @@ A premium full-stack Event Booking System that allows users to browse events, re
 
 ---
 
+# 🏛️ Architecture
+
+```text
+Frontend (React + React Query)
+            │
+            ▼
+     REST APIs (Express)
+            │
+            ▼
+    MongoDB (Mongoose)
+```
+
+---
+
 # 🛠️ Tech Stack
 
 ## Frontend
@@ -91,7 +125,6 @@ event-booking-system/
 ├── .github/
 │
 ├── client/
-│   ├── node_modules/
 │   ├── src/
 │   ├── .env.example
 │   ├── .gitignore
@@ -102,11 +135,9 @@ event-booking-system/
 │   └── vite.config.js
 │
 ├── server/
-│   ├── node_modules/
 │   ├── seed/
 │   ├── src/
 │   ├── tests/
-│   ├── .env
 │   ├── .env.example
 │   ├── Dockerfile
 │   ├── jest.config.js
@@ -160,8 +191,8 @@ VITE_API_URL=http://localhost:5000/api
 ## Clone Repository
 
 ```bash
-git clone https://github.com/Soumyadubeyyy/EventBooking
-cd event-booking-system
+git clone https://github.com/Soumyadubeyyy/EventBooking.git
+cd EventBooking
 ```
 
 ## Install Backend Dependencies
@@ -268,8 +299,6 @@ Request Body:
 }
 ```
 
----
-
 ### Login User
 
 ```http
@@ -285,15 +314,11 @@ Request Body:
 }
 ```
 
----
-
 ### Logout User
 
 ```http
 POST /api/auth/logout
 ```
-
----
 
 ### Get Current User
 
@@ -312,8 +337,6 @@ GET /api/events
 ```
 
 Returns all available events.
-
----
 
 ### Get Event Details
 
@@ -344,8 +367,6 @@ Request Body:
 
 Creates a new booking if seats are available.
 
----
-
 ### Get User Bookings
 
 ```http
@@ -353,8 +374,6 @@ GET /api/bookings/my
 ```
 
 Returns all bookings belonging to the authenticated user.
-
----
 
 ### Cancel Booking
 
@@ -400,33 +419,12 @@ Cancels an existing booking and releases reserved seats.
   user: ObjectId,
   event: ObjectId,
   seatsBooked: Number,
-  status: String, // 'confirmed' or 'cancelled'
+  status: String,
   createdAt: Date
 }
 ```
-# 🎟️ Event Booking System
-
-A premium full-stack Event Booking System that allows users to browse events, reserve seats, manage bookings, and enjoy a modern responsive experience with secure authentication, real-time seat validation, dark/light themes, and smooth animations.
 
 ---
-
-## 📸 Application Screenshots
-
-### Home Page (Light Mode)
-
-<img width="1877" height="915" alt="Screenshot 2026-06-21 222836" src="https://github.com/user-attachments/assets/f8aa40a3-5a2e-4306-83a9-f41966fb9092" />
-
-
-### Home Page (Dark Mode)
-
-<img width="1865" height="913" alt="Screenshot 2026-06-21 222843" src="https://github.com/user-attachments/assets/38cd07a9-03c4-4dee-833c-7e06e1a63329" />
-
-
-### Events Listing
-
-<img width="1878" height="925" alt="Screenshot 2026-06-21 222934" src="https://github.com/user-attachments/assets/e0fa91ba-99a2-425e-b3bd-4253249059f9" />
-
-
 
 # ✅ Validation & Error Handling
 
@@ -491,18 +489,18 @@ The application follows a mobile-first approach and works seamlessly across desk
 
 ---
 
-# 🚀 Future Improvements
+# 🌟 Additional Enhancements
 
-* Payment Gateway Integration
-* Admin Dashboard
-* Event Creation & Management Panel
-* Email Notifications
-* Real-time Updates using WebSockets
-* Event Categories & Tags
-* Advanced Search & Filtering
-* Booking Analytics Dashboard
+* Dark / Light Theme Support
+* Optimistic UI Updates
+* Framer Motion Animations
+* Responsive Design
+* Loading Skeletons
+* Toast Notifications
+* Dockerized Setup
+* Automated Testing
 
----
+
 
 # ✨ Highlights
 
