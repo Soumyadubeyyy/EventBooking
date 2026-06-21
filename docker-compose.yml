@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:7
+    container_name: ebs-mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - ebs-network
+
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: ebs-api
+    ports:
+      - '5000:5000'
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://mongo:27017/event-booking
+      - JWT_SECRET=docker-jwt-secret-change-in-production
+      - JWT_EXPIRES_IN=7d
+      - NODE_ENV=development
+      - CLIENT_URL=http://localhost:5173
+    depends_on:
+      - mongo
+    networks:
+      - ebs-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: ebs-client
+    ports:
+      - '5173:5173'
+    environment:
+      - VITE_API_URL=http://localhost:5000/api
+    depends_on:
+      - api
+    networks:
+      - ebs-network
+
+volumes:
+  mongo-data:
+
+networks:
+  ebs-network:
+    driver: bridge
